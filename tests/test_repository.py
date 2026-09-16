@@ -52,6 +52,14 @@ def test_scripts_are_read_only_and_strict():
             assert token not in text, f"{script.name} contains mutating command marker {token}"
 
 
+def test_validate_workflow_uses_read_only_permissions():
+    workflow = (ROOT / ".github/workflows/validate.yml").read_text()
+    assert "permissions:\n  contents: read" in workflow
+    assert "contents: write" not in workflow
+    assert "cancel-in-progress: true" in workflow
+    assert "pytest>=8.3,<9" in workflow
+
+
 def test_no_private_or_secret_placeholders():
     blocked = ["pass" + "word", "client" + "_secret", "gho" + "_", "tenant" + ".onmicrosoft.com"]
     for path in ROOT.rglob("*"):
