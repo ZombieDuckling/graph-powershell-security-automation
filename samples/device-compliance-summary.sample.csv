@@ -1,0 +1,4 @@
+platform,ownership,managedCount,compliantCount,nonCompliantCount,lastSyncOlderThan7Days
+Windows,company,11,10,1,1
+iOS,personal,4,4,0,0
+Android,personal,3,2,1,1

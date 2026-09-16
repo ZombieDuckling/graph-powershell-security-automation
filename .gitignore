@@ -1,0 +1,7 @@
+out/
+*.local.json
+*.secret.json
+.env
+.DS_Store
+__pycache__/
+.pytest_cache/

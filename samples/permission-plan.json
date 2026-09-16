@@ -1,0 +1,14 @@
+{
+  "graphProfile": "v1.0",
+  "requiredApplicationPermissions": [
+    "AuditLog.Read.All",
+    "Directory.Read.All",
+    "Policy.Read.All",
+    "DeviceManagementManagedDevices.Read.All",
+    "IdentityRiskyUser.Read.All",
+    "RoleManagement.Read.Directory"
+  ],
+  "optionalDelegatedPermissions": [
+    "User.Read"
+  ]
+}

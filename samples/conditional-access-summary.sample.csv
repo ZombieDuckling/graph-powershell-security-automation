@@ -1,0 +1,4 @@
+policyName,state,users,apps,grantControls,sessionControls
+Require MFA for admins,enabled,Directory roles: admin roles,All cloud apps,mfa,
+Block legacy authentication,enabled,All users,All cloud apps,block,
+Report only device compliance pilot,enabledForReportingButNotEnforced,Security pilot group,Office 365,compliantDevice,signInFrequency

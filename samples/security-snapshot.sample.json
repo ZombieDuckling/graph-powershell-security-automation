@@ -1,0 +1,39 @@
+{
+  "tenant": "contoso-lab.example",
+  "generatedUtc": "2026-09-16T08:00:00Z",
+  "source": "synthetic-sample",
+  "identity": {
+    "totalUsers": 42,
+    "mfaRegisteredUsers": 39,
+    "riskyUsers": [
+      {
+        "userPrincipalName": "sample.user1@contoso-lab.example",
+        "riskLevel": "medium",
+        "riskState": "atRisk"
+      }
+    ]
+  },
+  "privilegedRoles": [
+    {
+      "roleName": "Global Administrator",
+      "assignedCount": 2
+    },
+    {
+      "roleName": "Security Administrator",
+      "assignedCount": 3
+    }
+  ],
+  "applications": {
+    "highPrivilegeAppConsents": [
+      {
+        "displayName": "Sample Reporting App",
+        "permission": "Directory.Read.All",
+        "consentType": "Admin"
+      }
+    ]
+  },
+  "devices": {
+    "managedDeviceCount": 18,
+    "nonCompliantCount": 2
+  }
+}
