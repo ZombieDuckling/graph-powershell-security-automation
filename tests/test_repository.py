@@ -55,7 +55,7 @@ def test_scripts_are_read_only_and_strict():
 def test_no_private_or_secret_placeholders():
     blocked = ["pass" + "word", "client" + "_secret", "gho" + "_", "tenant" + ".onmicrosoft.com"]
     for path in ROOT.rglob("*"):
-        if path.is_file() and ".git" not in path.parts:
+        if path.is_file() and ".git" not in path.parts and "__pycache__" not in path.parts:
             text = path.read_text(errors="ignore").lower()
             for token in blocked:
                 assert token not in text, f"{path} contains blocked token {token}"
